@@ -4,8 +4,12 @@
   "description": "this is mmy first project node js",
   "main": "index.js",
   "scripts": {
+    "dev":"nodemon app.js",
     "start": "node app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
