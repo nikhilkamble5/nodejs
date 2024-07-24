@@ -46,9 +46,11 @@ app.get("/" ,(req,res)=>{
 });
 
 app.get("/about" ,(req,res)=>{
-  return res.send("Hello From About page");
+  // return res.send("Hello From About page"+ 'hey'+ req.query.name+ 'you are'+ req.query.age);
+  return res.send(`hello ${req.query.name}`)
 });
 
+app.listen(8000,()=>console.log("Server started !"))
 
 // const myserver = http.createServer((req, res) => {
 //   if (req.url === "/favicon.ico") return res.end();
@@ -82,5 +84,5 @@ app.get("/about" ,(req,res)=>{
 //   });
 // });
 
-const myserver=http.createServer(app);
-myserver.listen(8000, () => console.log("Server started!"));
+// const myserver=http.createServer(app);
+// myserver.listen(8000, () => console.log("Server started!"));
